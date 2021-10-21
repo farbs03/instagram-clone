@@ -9,6 +9,7 @@ import { Input, Icon } from "@chakra-ui/react"
 import { 
     MdHome, MdOutlineHome,
     MdMessage, MdOutlineMessage,
+    MdOutlineAddBox,
     MdExplore, MdOutlineExplore,
     MdFavorite, MdFavoriteBorder,
     MdAccountCircle, MdOutlineAccountCircle
@@ -26,6 +27,11 @@ const Navbar = (props) => {
             Link: "/messages",
             Selected: MdMessage,
             UnSelected: MdOutlineMessage
+        },
+        {
+            Link: "/new-post",
+            Selected: MdOutlineAddBox,
+            UnSelected: MdOutlineAddBox
         },
         {
             Link: "/explore",
@@ -52,7 +58,8 @@ const Navbar = (props) => {
                 variant="unstyled" 
                 style={{padding: "0px"}} 
                 onClick={() => setSelectedItem(idx)}
-                icon={<Icon w={6} h={6} as={selectedItem === idx ? item.Selected : item.UnSelected} />}
+                size="md"
+                icon={<Icon w={7} h={7} as={selectedItem === idx ? item.Selected : item.UnSelected} />}
             />
         )
     }
@@ -60,25 +67,21 @@ const Navbar = (props) => {
     return (
         <>
             <div style={{borderBottom: "1px solid #ccc", height: "60px", padding: "10px 50px"}}>
-                <Flex style={{justifyContent: "center", alignItems: "center", maxWidth: "1200px", margin: "0px auto"}}>
-                    <Link href="/">
-                        <img src={Logo} alt="logo" style={{width: "100px"}} />
+                <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", maxWidth: "920px", margin: "0px auto"}}>
+                    <Link href="/" style={{marginBottom: "-10px"}}>
+                        <img src={Logo} alt="logo" style={{width: "103px", height: "29px"}} />
                     </Link>
 
-                    <Spacer />
-
-                    <Input placeholder="Search" maxW="300px" style={{background: "rgb(245, 245, 245)"}} />
-
-                    <Spacer />
+                    <Input placeholder="Search" maxW="215px" style={{background: "rgb(245, 245, 245)", fontSize: '14px', height: "30px"}} />
 
                     <HStack>
                         {items.map((item, idx) => (
                             <NavItem item={item} idx={idx} />
                         ))}
                     </HStack>
-                </Flex>
+                </div>
             </div>
-            <div className="main">
+            <div className="main" style={{background: "rgb(250, 250, 250)"}}>
                 {props.children}
             </div>
         </>
