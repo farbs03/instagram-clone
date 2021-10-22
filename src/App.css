@@ -11,5 +11,14 @@
 }
 
 .css-iyqo1w:focus, .css-iyqo1w[data-focus] {
-    box-shadow: "none" !important;
+    box-shadow: none !important;
+}
+
+.css-1ak8m0c:focus, .css-1ak8m0c[data-focus] {
+    border-color: #ccc !important;
+    box-shadow: none !important;
+}
+
+.css-r6z5ec {
+    position: relative !important;
 }

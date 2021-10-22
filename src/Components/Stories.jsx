@@ -17,7 +17,7 @@ const Stories = () => {
     }
 
     return (
-        <div style={{border: "1px solid #ccc", background: "white", height: "110px", display: "flex", alignItems: "center", padding: "20px 10px", maxWidth: "600px", margin: "0px auto", borderRadius: "2px"}}>
+        <div style={{border: "1px solid rgb(219, 219, 219)", background: "white", height: "110px", display: "flex", alignItems: "center", padding: "20px 10px", maxWidth: "600px", margin: "0px auto", borderRadius: "2px"}}>
             {[0, 1, 2].map(() => (
                 <StoryCircle />
             ))}

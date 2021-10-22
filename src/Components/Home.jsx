@@ -36,7 +36,7 @@ const Home = () => {
     
 
     return (
-        <div style={{padding: "30px 10px", display: "flex", flexDirection: "row", justifyContent: "center", overflowX: "hidden"}}>
+        <div style={{padding: "90px 10px 10px 10px", display: "flex", flexDirection: "row", justifyContent: "center", overflowX: "hidden"}}>
             <div style={{marginRight: "20px", maxWidth: "600px"}}>
                 <Stories />
                 
